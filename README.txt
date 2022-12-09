@@ -14,7 +14,7 @@ Waveforms (WAVEFORM.*)
  SINE
 
 Reference
-  wikipedia.org/wiki/Waveform#Examples
+ wikipedia.org/wiki/Waveform#Examples
 
 @offalynne, 2022
 MIT licensed, use as you please
