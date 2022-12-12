@@ -3,7 +3,7 @@ waveforms.gml
 Computational waveforms for GMS2
 
 wave(phase, frequency, [waveform])
-  function: Get wave amplitude between -0.5 and 0.5
+  function: Amplitude between -0.5 and 0.5
   returned: Real
 
 Waveforms (WAVEFORM.*)
