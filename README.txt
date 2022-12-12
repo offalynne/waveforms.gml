@@ -3,7 +3,7 @@ waveforms.gml
 Periodic waveforms for GMS2
 
 wave(phase, frequency, [waveform])
-  function: Provide wave amplitude between -0.5 and 0.5
+  function: Get wave amplitude between -0.5 and 0.5
   returned: Real
 
 Waveforms (WAVEFORM.*)
@@ -18,3 +18,4 @@ Reference
 
 @offalynne, 2022
 MIT licensed, use as you please
+k
