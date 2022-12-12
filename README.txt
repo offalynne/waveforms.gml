@@ -1,6 +1,6 @@
 waveforms.gml
 
-Periodic waveforms for GMS2
+Computational waveforms for GMS2
 
 wave(phase, frequency, [waveform])
   function: Get wave amplitude between -0.5 and 0.5
