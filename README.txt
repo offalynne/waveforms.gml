@@ -6,7 +6,7 @@ wave(phase, frequency, [waveform])
   function: Amplitude between -0.5 and 0.5
   returned: Real
 
-Waveforms (WAVEFORM.*)
+Waveforms (WAVEFORM_*)
  FLAT (none)
  TRIANGLE
  SAWTOOTH

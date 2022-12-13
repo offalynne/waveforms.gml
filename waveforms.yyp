@@ -3,6 +3,7 @@
   "resourceVersion": "1.6",
   "name": "waveforms",
   "resources": [
+    {"id":{"name":"sc_test","path":"scripts/sc_test/sc_test.yy",},"order":2,},
     {"id":{"name":"waveforms","path":"scripts/waveforms/waveforms.yy",},"order":2,},
     {"id":{"name":"ob_test","path":"objects/ob_test/ob_test.yy",},"order":0,},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},"order":1,},

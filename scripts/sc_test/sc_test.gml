@@ -1,14 +1,15 @@
-draw_test = function()
+function sc_test()
 {
     static _x  = 0;    // test x
-    static _p  = 8;    // test period
+    static _p  = 8;    // test period    
+    static _dy = 0;    // test dy
     static _sp = 60;   // test speed
     static _bg = true; // draw mode
     
-    var _names = //variable_struct_get_names(WAVEFORM);
-                 ["SQUARE", "SINE", "FLAT", "TRIANGLE", "SAWTOOTH"];
+    var _waves = [WAVEFORM_SQUARE, WAVEFORM_SINE, WAVEFORM_FLAT, WAVEFORM_TRIANGLE, WAVEFORM_SAWTOOTH];
+    var _names = [        "SQUARE",        "SINE",        "FLAT",        "TRIANGLE",        "SAWTOOTH"];
     
-    var _len     = array_length(_names);
+    var _len     = array_length(_waves);
     var _cleared = false;
     
     if (keyboard_check_pressed(ord("A")) || device_mouse_check_button_pressed(1, mb_left) || gamepad_button_check_pressed(0, gp_face1))
@@ -131,10 +132,10 @@ draw_test = function()
         }
         else
         {        
-            var _dy = _bar * (_i + 1.5) + wave(_x - 1, _period, variable_instance_get(WAVEFORM, _names[_i])) * _bar;
+            _dy = _bar * (_i + 1.5) + wave(_x - 1, _period, _waves[_i]) * _bar;
         }
         
-        var _y  = _bar * (_i + 1.5) + wave(_x, _period, variable_instance_get(WAVEFORM, _names[_i])) * _bar;
+        var _y  = _bar * (_i + 1.5) + wave(_x, _period, _waves[_i]) * _bar;
         
         if (_bg)
         {
@@ -146,7 +147,7 @@ draw_test = function()
         if (!_bg)
         {
             // draw waveform label shadow
-            var _c = draw_get_color();
+             _c = draw_get_color();
             draw_set_color(0);
     
             _ii = 0;
