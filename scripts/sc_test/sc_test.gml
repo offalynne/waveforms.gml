@@ -7,7 +7,6 @@ function sc_test()
     static _bg = true; // draw mode
     
     var _waves = [WAVEFORM_SQUARE, WAVEFORM_SINE, WAVEFORM_FLAT, WAVEFORM_TRIANGLE, WAVEFORM_SAWTOOTH];
-    var _names = [        "SQUARE",        "SINE",        "FLAT",        "TRIANGLE",        "SAWTOOTH"];
     
     var _len     = array_length(_waves);
     var _cleared = false;
@@ -35,7 +34,7 @@ function sc_test()
         if (keyboard_check_pressed(vk_left))  _p -= 2;
         if (keyboard_check_pressed(vk_right)) _p += 2;
         _p  = clamp(_p, 1, room_width/20);
-    }    
+    }
     
     var _period = room_width / _p;
 
@@ -122,6 +121,7 @@ function sc_test()
     _i = 0;
     repeat(_len)
     {
+        var _name = _waves[_i];
         var _mouse_on = (_mouse_bar == _i);
         
         // draw fillbar
@@ -132,10 +132,10 @@ function sc_test()
         }
         else
         {        
-            _dy = _bar * (_i + 1.5) + wave(_x - 1, _period, _waves[_i]) * _bar;
+            _dy = _bar * (_i + 1.5) + wave(_x - 1, _period, _name) * _bar;
         }
         
-        var _y  = _bar * (_i + 1.5) + wave(_x, _period, _waves[_i]) * _bar;
+        var _y  = _bar * (_i + 1.5) + wave(_x, _period, _name) * _bar;
         
         if (_bg)
         {
@@ -153,7 +153,7 @@ function sc_test()
             _ii = 0;
             repeat(6)
             {
-                draw_text(10 + lengthdir_x(2, 60*_ii), _bar * (_i + 1) + 25 + lengthdir_y(2, 60*_ii), _names[_i]);
+                draw_text(10 + lengthdir_x(2, 60*_ii), _bar * (_i + 1) + 25 + lengthdir_y(2, 60*_ii), _name);
                 ++_ii;
             }
         
@@ -164,7 +164,7 @@ function sc_test()
         draw_set_color(c_white);
         var _a = draw_get_alpha();
         draw_set_alpha((_mouse_on)? 1 : 0.5);
-        draw_text(10, _bar * (_i + 1) + 25, _names[_i]);
+        draw_text(10, _bar * (_i + 1) + 25, _name);
         draw_set_color(_c);
         draw_set_alpha(_a);
         
