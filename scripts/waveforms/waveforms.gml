@@ -1,8 +1,7 @@
 function wave(_phase, _frequency, _waveform = WAVEFORM_FLAT)
 {
     gml_pragma("forceinline");
-    if (_frequency == 0.0) return 0.0;
-    
+    if (_frequency == 0.0) return 0.0;    
     //if (!is_method(variable_struct_get(__waveform(), _waveform))) show_error("No such waveform: " + string(_waveform), true); else //Optional error checking
     return variable_struct_get(__waveform(), _waveform)(_phase, _frequency);
 }
