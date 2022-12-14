@@ -1,7 +1,7 @@
 function wave(_phase, _frequency, _waveform = WAVEFORM_FLAT)
 {
     static __waveforms_struct = __waveforms();
-    //if (!is_method(__waveforms_struct[$ _waveform])) show_error("No such easing: " + string(_waveform), true); else //Optional error checking
+    //if (!is_method(__waveforms_struct[$ _waveform])) show_error("No such waveform: " + string(_waveform), true); else //Optional error checking
     if (_frequency == 0.0) return 0.0;
     return __waveforms_struct[$ _waveform](_phase, _frequency);
 }
