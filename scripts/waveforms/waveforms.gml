@@ -2,7 +2,7 @@ function wave(_phase, _frequency, _waveform = WAVEFORM_FLAT)
 {
     if (_frequency == 0.0) return 0.0;
     static __waveforms_struct = __waveforms();
-    //if (!is_method(__waveforms_struct[$ _waveform])) show_error("No such waveform: " + string(_waveform), true); else //Optional error checking
+    //if (!is_method(__waveforms_struct[$ _waveform])) show_error("No such waveform: " + string(_waveform), true); else // optional error checking
     return __waveforms_struct[$ _waveform](_phase, _frequency);
 }
 
