@@ -3,7 +3,7 @@ waveforms.gml
 Computational waveforms for GMS2
 
 wave(phase, frequency, [waveform])
-  function: Wave amplitude
+  function: Get wave amplitude
   returned: Real
 
 Waveforms (WAVEFORM_*)
@@ -14,7 +14,7 @@ Waveforms (WAVEFORM_*)
  SINE
 
 Reference
- wikipedia.org/wiki/Waveform#Examples
+ wikipedia.org/wiki/Waveform
 
 @offalynne, 2022
 MIT licensed, use as you please
